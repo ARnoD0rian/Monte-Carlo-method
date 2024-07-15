@@ -1,4 +1,4 @@
-from method.figure.point.point import Point
+from Method.figure.point.point import Point
 import sympy as sym
 
 class Figure:

@@ -1,5 +1,5 @@
-from method.figure.figure import Figure
-from method.figure.point.point import Point
+from Method.figure.figure import Figure
+from Method.figure.point.point import Point
 from Helpers.Multiprocessor import Multiprocessor
 import sympy as sym
 import multiprocessing as np
@@ -12,7 +12,7 @@ class MonteCarlo:
     def calculating_area(figure: Figure,
                            square: list[Point],
                            N: int = 0,
-                           points: list[Point] | None =  None
+                           points: list[Point] =  None
                            ) -> float:
         
         if points is None:
@@ -33,7 +33,7 @@ class MonteCarlo:
         
     
     @staticmethod
-    def integrate(func: str, limits: tuple[float, float], N: int = 10, square: list[Point] | None = None) -> float:
+    def integrate(func: str, limits: tuple[float, float], N: int = 10, square: list[Point] = None) -> float:
         figure = Figure([f"x <= y", f"x >= 0"])
         if square is None:
             square = [Point(limits[0], limits[0]), Point(limits[1], limits[1])]
